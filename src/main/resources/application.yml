@@ -1,0 +1,8 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://172.23.0.2:5432/sgiextranet?schema=extranet
+    username: sgiextranet
+    password: sgiextranet
+  devtools:
+    remote:
+      secret: sgi extranet 123

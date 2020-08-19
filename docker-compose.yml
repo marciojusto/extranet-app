@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: sgiextranet
+      POSTGRES_PASSWORD: sgiextranet
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-extranet:/var/lib/postgresql/data
+
+volumes:
+  db-extranet:
