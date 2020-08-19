@@ -6,3 +6,14 @@ spring:
   devtools:
     remote:
       secret: sgi extranet 123
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+
+server:
+  error:
+    include-stacktrace: on_param
