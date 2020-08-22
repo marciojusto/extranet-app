@@ -1,65 +1,48 @@
 language: java
-
 jdk:
-  - openjdk11
-
+- openjdk11
 services:
-  - docker
-
-# env:
-#   global:
-#     secure: HEROKU_API_KEY
-#     secure: DOCKER_USER
-#     secure: DOCKER_PASS
-#     secure: IMAGE_NAME
-#     secure: TEAMS_CHANNEL_URL
-
+- docker
 env:
   global:
-    - secure: Z7zEHyGTJweS1w7Tgrxa8GQxmtoaJVXVsCCVddDdKtokQuYbS1d9j09giuwOAl0c/vvV777Q9NrmegNw4VPIExumQrLcMGdxd3n+iukkmwoV9HtEYJ1o4IckedB7L+7A0LgLxJYxpRivA1PEqeGHZXSU55cFi8go1blQxJ2lK+Tj/QiTewmtprWCz5I61z9WruqwtGNn+DXY2IljvUC9WPYlsTHuimmpbutfy4IBfKAUR3Gbl3HEYAkPxdHWtCOtAqpeqrooffctQ6r3ge7YVpKZAFSlnLlVmgpLAKrZIBef/6PrcWlRPkVr8RCHB6j1GNDQcn/B6xMg7enoNHFQztnrnf0pyEMmPKmqXP3l2oO0mAD9Wknz4TZ3HysMbLIt9hRZl3Z2yuQ4hlYFqL6MGxmaJdsAEO8tuy95UjFyuTq/FoRuQhRcox52d2CS+5asi/mG8yVfHaCmVi1au6sJVEcZaxNqCmL563pEKSf0GCG6VK2Lp+/7ii9bXXW77Ui9aY1eMslmR7HxozTHayD7VWnS8VFJI/gBRXqdBuQkRsRmbVXHgH1vkawa8oZB6XCSAgXddZc+htiESyT6NkGULlU4HxlhW1STkdtYhKAThpXBwpz52b+eVRANqRCmzDkoNIt6gIlQSAFRiU76KUMzbrmX/hvH80hVOoptDQoVbKY=
-    - secure: pmOb6IO7n+KOT0w6fGz/hfYOWaB9fmftlNuQq4bb4zzb0BZEY4/7X6BtrquWLsfhrSi4z/+s4DvRL1hDwQmzbKITiVqPPRN6wcWK9VwWAfhvcIiMVnazUmQQx0enaj4nsdJrSHgIqnHGYnJex6Ppqac2X4m8WkRNvV0Jjjz81r8pkxlRXq5/0Ni8qbkoLbP25pT1BwLYlPC2yoFaUAW/04g0sZ9nQc7AWKEwLeaNzQooO5iY8Nr1apXWDTkmjSIILJYOQXlbR5bJtrwpJl4zXcZdJhi4OgiiiRulKDMGVRJEJfQlVAvuOBJba4BSvvADrvS4XPn1FBsixigBprFmzp4E630L+wt8VmDbgKbX6b8OnwBMufx6VAzMuCx7DIvKUnHVot0DPTfD8XMF3UaTcfRo9Lgc55NKb1Ai9+fnxTwwm3s7hn4WAs464OvOc3a3KNyjyF28chalWNuc7YT19RHn4B5iAvJaM32LvWlJyDs6q8K2XPcmqZTMh1u2ASaPL8fwcLinZhrIbS7wfzNsX20ogf/K1V3qYZJzI8rm2SjFGv4knhdzJvnBPtC8sHUgz6SoU5ksUGS7SCiRCDeNvjEo2JDIoZ3BIshnP0KAFplNV1XwV7sjvfwfEuVyKius9bdbw58XkkzOY9krioCkYQJtS9QcJnbARQl81345gAw=
-    - secure: nAXlplywj93/3OaRQz31CBkaw7CjTYQcYmpneBdfek9YRUgvSTs9DhuBFe+nb2qQSbodTu2HLsNc5POv970Qlrb5CdWr0ZXR/N+R9JSp1ToF/fjCffbtLPHAN01ZjA4+pmvZnoKtOgeDvw1UMZxqsx4SIPymdRjHtN+RTHCoarPM9L7ieNFhTuYSRcDuPd3YyQi8qJjANSylCBFWBW6v6dRhO+jLdjc/leUbSzUWfv0lzYzeQG75M+P/WXrKVw8lbg0poAsguaud3kRLIFPZde+PJASugYvKqw4SNmaXclCJI4iETcMNSCnz6IjHT7A2zOHg41QR4UmB49MG+V0G/vlmUDT7C43LIxR5vKgKYrUbZm3LASN3muS3JTGwiJ9xsbaqzSpbzSBo9GD24OjK2kRebV0RfwtPFUp8RDs5sya1UCSqYLamTdlTK4vdiC8E6cxrXLIzTq0bmMHf8aSOic95EnNxTf5kpJ3EOUkcL9ukVjbUusrPVCPkNI4rIknj4cAhhOFUWsjFujNAkyoUyQDCn9SlcQs3XLsxUcIvwhlQWDBkVe5+2WvfrE5L3oz0MD9cf+f6g4Qsmd/KRsV2xttnnFIqy/euHmo8m8jloVLAzPnMuPrL/H9qjCy1BRhYvPZoxBMn1GcGdVOazFdxg5+EBwfEASwDHUPf4TNhXqs=
-    - secure: JAQmVRWdA/dH7iuSBd1N7gseA1P+v8r2kAsi6kgMM3F47DtoSkUM64RhGg+VB3PVmuxeCIClSZJAoJtyTLEinySy1TCWl403w503ndBAGt8L8Pod9W65xnanTQnzq6S0uR4JwML4y+WlmAjSejs+HsZCzEFAx03rc7Y+hRERm6xPvVp+I9/wzIGyd5Zk2jclUbFZlYypriGwLndsWlWPfnZJBKJCps7MvLXlq0N8QJOXieoVsnrzriBFSjee2PRl4i9qqH7vGOxNB5Vt5jCSYWmU0hPMOB2Y2391Vlx07ZiSy+7UWeHoab9OWd7dw0NDVQI4n+WOFZVHqLmcs70/3DITMdshPlqOHgLsGElIzfIsfZucHBPOK9VAZCSas1vF65VOo09l1E+j6du4x+lPL4q8leNrZxf6QX2gI5C/2klgdZmnorOtOb9C8wcZFACiDXs8+b0wzT5soJjHmPYJLZMMyR91xxpSfIhql0CneAzzE3AGo0z9JHjzoAPYN/pEEanjaJD9+g6Dqg7IGyQmm7pMue0SIdPyvbjm/gGn6YJ3uKk/fE+QSXj+eA9AmoT+0NAGJkrL+YHfr0RKm5Wl0ZEQRcuuEbZ3Am3q4aJ/qMKqzLClTUYvgwvncNKMKKivb88CLCt3N4v4H/iW8ePqEmORv3JHG4qapqn2j2Hz9Xg=
-    - secure: OkJHeTxynG7d4lp7BcE0tkB7IqKRPn0kZq7gO5lICETC+53zVM0/ecyiRKE9SFZZ+ma4QZ9IKiPw909H/sscX/RtDY7xRPtw8Ywk9w5bQUi4shxd1quYlKGnzXjufOA2ArYAa6M7CuujxSAZEeDQ1Bhy/odvhmUnrPWP4Gpb2VZqWCJqaVDX+XbKwBHddvmIFblZ+YRHtqlUE/hSD+7R7szFz8ts8TaPtVwpP2H6q+I2dUl5eGr5oPCpM3ASCTKQwYu5MkKtEpOVBWqiKBw3yucUuxCC2XQXrtmzv6PURC1HL87amdjmLO0NTJdCs/6vpeuSRNxwEQNZ09qY4XIdDRE7BPdvaB534/CuiDW1jH7qVn8Kdfl1uv39VslfV3FNrnQOU/sj3yHDov1MjnRn3StvavtwQA+mgGxY8iURMUSFNvVYVA8R89/5Lx/HH/u+iZ9abN0tpIYIDe2YNU/QT5FwXSuKkvAb5ZQ/1btrgM10XBHBpLm8Z9ZSQ9GCPR6FheVkvNnNk22a4aWsymrLF+pRa5k95/HUQA8tDecDu+a0DGV8TgXIOYHXDxa28DMEpyKLwPCcSnd8u6Xqm2vkVwps0e8se98lKvt3h8Mm014/VLs6u+3Q/LWtBURX/RRnzZVMF1OrAYTkSt/8jr9qYVBcjomwmNjjTpSTWzR0lzs=
-
+  - secure: Z7zEHyGTJweS1w7Tgrxa8GQxmtoaJVXVsCCVddDdKtokQuYbS1d9j09giuwOAl0c/vvV777Q9NrmegNw4VPIExumQrLcMGdxd3n+iukkmwoV9HtEYJ1o4IckedB7L+7A0LgLxJYxpRivA1PEqeGHZXSU55cFi8go1blQxJ2lK+Tj/QiTewmtprWCz5I61z9WruqwtGNn+DXY2IljvUC9WPYlsTHuimmpbutfy4IBfKAUR3Gbl3HEYAkPxdHWtCOtAqpeqrooffctQ6r3ge7YVpKZAFSlnLlVmgpLAKrZIBef/6PrcWlRPkVr8RCHB6j1GNDQcn/B6xMg7enoNHFQztnrnf0pyEMmPKmqXP3l2oO0mAD9Wknz4TZ3HysMbLIt9hRZl3Z2yuQ4hlYFqL6MGxmaJdsAEO8tuy95UjFyuTq/FoRuQhRcox52d2CS+5asi/mG8yVfHaCmVi1au6sJVEcZaxNqCmL563pEKSf0GCG6VK2Lp+/7ii9bXXW77Ui9aY1eMslmR7HxozTHayD7VWnS8VFJI/gBRXqdBuQkRsRmbVXHgH1vkawa8oZB6XCSAgXddZc+htiESyT6NkGULlU4HxlhW1STkdtYhKAThpXBwpz52b+eVRANqRCmzDkoNIt6gIlQSAFRiU76KUMzbrmX/hvH80hVOoptDQoVbKY=
+  - secure: pmOb6IO7n+KOT0w6fGz/hfYOWaB9fmftlNuQq4bb4zzb0BZEY4/7X6BtrquWLsfhrSi4z/+s4DvRL1hDwQmzbKITiVqPPRN6wcWK9VwWAfhvcIiMVnazUmQQx0enaj4nsdJrSHgIqnHGYnJex6Ppqac2X4m8WkRNvV0Jjjz81r8pkxlRXq5/0Ni8qbkoLbP25pT1BwLYlPC2yoFaUAW/04g0sZ9nQc7AWKEwLeaNzQooO5iY8Nr1apXWDTkmjSIILJYOQXlbR5bJtrwpJl4zXcZdJhi4OgiiiRulKDMGVRJEJfQlVAvuOBJba4BSvvADrvS4XPn1FBsixigBprFmzp4E630L+wt8VmDbgKbX6b8OnwBMufx6VAzMuCx7DIvKUnHVot0DPTfD8XMF3UaTcfRo9Lgc55NKb1Ai9+fnxTwwm3s7hn4WAs464OvOc3a3KNyjyF28chalWNuc7YT19RHn4B5iAvJaM32LvWlJyDs6q8K2XPcmqZTMh1u2ASaPL8fwcLinZhrIbS7wfzNsX20ogf/K1V3qYZJzI8rm2SjFGv4knhdzJvnBPtC8sHUgz6SoU5ksUGS7SCiRCDeNvjEo2JDIoZ3BIshnP0KAFplNV1XwV7sjvfwfEuVyKius9bdbw58XkkzOY9krioCkYQJtS9QcJnbARQl81345gAw=
+  - secure: nAXlplywj93/3OaRQz31CBkaw7CjTYQcYmpneBdfek9YRUgvSTs9DhuBFe+nb2qQSbodTu2HLsNc5POv970Qlrb5CdWr0ZXR/N+R9JSp1ToF/fjCffbtLPHAN01ZjA4+pmvZnoKtOgeDvw1UMZxqsx4SIPymdRjHtN+RTHCoarPM9L7ieNFhTuYSRcDuPd3YyQi8qJjANSylCBFWBW6v6dRhO+jLdjc/leUbSzUWfv0lzYzeQG75M+P/WXrKVw8lbg0poAsguaud3kRLIFPZde+PJASugYvKqw4SNmaXclCJI4iETcMNSCnz6IjHT7A2zOHg41QR4UmB49MG+V0G/vlmUDT7C43LIxR5vKgKYrUbZm3LASN3muS3JTGwiJ9xsbaqzSpbzSBo9GD24OjK2kRebV0RfwtPFUp8RDs5sya1UCSqYLamTdlTK4vdiC8E6cxrXLIzTq0bmMHf8aSOic95EnNxTf5kpJ3EOUkcL9ukVjbUusrPVCPkNI4rIknj4cAhhOFUWsjFujNAkyoUyQDCn9SlcQs3XLsxUcIvwhlQWDBkVe5+2WvfrE5L3oz0MD9cf+f6g4Qsmd/KRsV2xttnnFIqy/euHmo8m8jloVLAzPnMuPrL/H9qjCy1BRhYvPZoxBMn1GcGdVOazFdxg5+EBwfEASwDHUPf4TNhXqs=
+  - secure: JAQmVRWdA/dH7iuSBd1N7gseA1P+v8r2kAsi6kgMM3F47DtoSkUM64RhGg+VB3PVmuxeCIClSZJAoJtyTLEinySy1TCWl403w503ndBAGt8L8Pod9W65xnanTQnzq6S0uR4JwML4y+WlmAjSejs+HsZCzEFAx03rc7Y+hRERm6xPvVp+I9/wzIGyd5Zk2jclUbFZlYypriGwLndsWlWPfnZJBKJCps7MvLXlq0N8QJOXieoVsnrzriBFSjee2PRl4i9qqH7vGOxNB5Vt5jCSYWmU0hPMOB2Y2391Vlx07ZiSy+7UWeHoab9OWd7dw0NDVQI4n+WOFZVHqLmcs70/3DITMdshPlqOHgLsGElIzfIsfZucHBPOK9VAZCSas1vF65VOo09l1E+j6du4x+lPL4q8leNrZxf6QX2gI5C/2klgdZmnorOtOb9C8wcZFACiDXs8+b0wzT5soJjHmPYJLZMMyR91xxpSfIhql0CneAzzE3AGo0z9JHjzoAPYN/pEEanjaJD9+g6Dqg7IGyQmm7pMue0SIdPyvbjm/gGn6YJ3uKk/fE+QSXj+eA9AmoT+0NAGJkrL+YHfr0RKm5Wl0ZEQRcuuEbZ3Am3q4aJ/qMKqzLClTUYvgwvncNKMKKivb88CLCt3N4v4H/iW8ePqEmORv3JHG4qapqn2j2Hz9Xg=
+  - secure: OkJHeTxynG7d4lp7BcE0tkB7IqKRPn0kZq7gO5lICETC+53zVM0/ecyiRKE9SFZZ+ma4QZ9IKiPw909H/sscX/RtDY7xRPtw8Ywk9w5bQUi4shxd1quYlKGnzXjufOA2ArYAa6M7CuujxSAZEeDQ1Bhy/odvhmUnrPWP4Gpb2VZqWCJqaVDX+XbKwBHddvmIFblZ+YRHtqlUE/hSD+7R7szFz8ts8TaPtVwpP2H6q+I2dUl5eGr5oPCpM3ASCTKQwYu5MkKtEpOVBWqiKBw3yucUuxCC2XQXrtmzv6PURC1HL87amdjmLO0NTJdCs/6vpeuSRNxwEQNZ09qY4XIdDRE7BPdvaB534/CuiDW1jH7qVn8Kdfl1uv39VslfV3FNrnQOU/sj3yHDov1MjnRn3StvavtwQA+mgGxY8iURMUSFNvVYVA8R89/5Lx/HH/u+iZ9abN0tpIYIDe2YNU/QT5FwXSuKkvAb5ZQ/1btrgM10XBHBpLm8Z9ZSQ9GCPR6FheVkvNnNk22a4aWsymrLF+pRa5k95/HUQA8tDecDu+a0DGV8TgXIOYHXDxa28DMEpyKLwPCcSnd8u6Xqm2vkVwps0e8se98lKvt3h8Mm014/VLs6u+3Q/LWtBURX/RRnzZVMF1OrAYTkSt/8jr9qYVBcjomwmNjjTpSTWzR0lzs=
 before_install:
-  - docker pull openjdk:11
-
+- docker pull openjdk:11
 script:
-  - mvn test
-  - mvn clean package
-
-# Create Docker image for our app and push it to Dockerhub repository and send messages to the Teams channel after the `script` job is successfully executed
+- mvn test
+- mvn clean package
 after_success:
-  - export COMMIT=${TRAVIS_COMMIT::7}
-  - export TAG=`if [ ! -z "$TRAVIS_TAG" ]; then echo "$TRAVIS_TAG"; else echo "$TRAVIS_BRANCH--$COMMIT"; fi`
-  - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - docker build --tag $IMAGE_NAME:latest .
-  - docker tag $IMAGE_NAME:latest $IMAGE_NAME:$TAG
-  - docker push $IMAGE_NAME:$TAG
-  - export TITLE="$IMAGE_NAME:$TAG is built properly and pushed to Dockerhub"
-  - export TIMESTAMP=`date`
-  - export GIT_LOG=`git log -1 --pretty=%B $COMMIT`
-  - export TEXT="[build version] $TAG<br />[datetime] $TIMESTAMP<br />[changelog] $GIT_LOG<br />"
-  - chmod +x send_to_teams.sh && ./send_to_teams.sh
-
-# If the `script` job fails, it will send a failure message to Teams
+- export COMMIT=${TRAVIS_COMMIT::7}
+- export TAG=`if [ ! -z "$TRAVIS_TAG" ]; then echo "$TRAVIS_TAG"; else echo "$TRAVIS_BRANCH--$COMMIT";
+  fi`
+- docker login -u $DOCKER_USER -p $DOCKER_PASS
+- docker build --tag $IMAGE_NAME:latest .
+- docker tag $IMAGE_NAME:latest $IMAGE_NAME:$TAG
+- docker push $IMAGE_NAME:$TAG
+- export TITLE="$IMAGE_NAME:$TAG is built properly and pushed to Dockerhub"
+- export TIMESTAMP=`date`
+- export GIT_LOG=`git log -1 --pretty=%B $COMMIT`
+- export TEXT="[build version] $TAG<br />[datetime] $TIMESTAMP<br />[changelog] $GIT_LOG<br
+  />"
+- chmod +x send_to_teams.sh && ./send_to_teams.sh
 after_failure:
-  - export chmod +x send_to_teams.sh && ./send_to_teams.sh
-  - export TEXT=[datetime]:`date`
-
-# Allow Travis to help deploy the app on Heroku
+- export chmod +x send_to_teams.sh && ./send_to_teams.sh
+- export TEXT=[datetime]:`date`
 deploy:
   provider: heroku
   api-key:
-    secure: "$HEROKU_API_KEY"
+    secure: $HEROKU_API_KEY
   app: extranet-app
   on:
     tags: true
-    repo: "$IMAGE_NAME"
+    repo: $IMAGE_NAME
 
-# Send the message of success after the deploy is done properly
 after_deploy:
-  - export TITLE="🎉🎉🎉 New version $TAG is deployed to Heroku production 🎉🎉🎉"
-  - export TEXT=[datetime]:`date`
-  - ./send_to_teams.sh
+- "export TITLE=\"\U0001F389\U0001F389\U0001F389 New version $TAG is deployed to Heroku
+  production \U0001F389\U0001F389\U0001F389\""
+- export TEXT=[datetime]:`date`
+- "./send_to_teams.sh"
