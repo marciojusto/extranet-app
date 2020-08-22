@@ -60,6 +60,6 @@ deploy:
 
 # Send the message of success after the deploy is done properly
 after_deploy:
-  - export TITLE="🎉🎉🎉 New version $TAG is deployed to Heroku production 🎉🎉🎉"
+  - export TITLE="🎉🎉 New version $TAG is deployed to Heroku production 🎉🎉"
   - export TEXT=[datetime]:`date`
   - ./send_to_teams.sh
