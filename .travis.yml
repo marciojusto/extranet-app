@@ -51,12 +51,12 @@ after_failure:
 # Allow Travis to help deploy the app on Heroku
 deploy:
   provider: heroku
-  api-key:
-    secure: "$HEROKU_API_KEY"
+  api_key:
+    secure: YDUNJwIhqBtUpuiqKHBut+9oMQdPeY+KmLWlVCn1Rcpl9N9UibjIT7U7LLHRl0wNbsO8+N1bvHDolPQf2/wJqcdr3tRc2tw8k/w72WaOyQb6cPKudtf74k24MnnomKpgqUWm1lnS/tC6n/d9Jo+EubbK6pPkub9slsqX9kf/6WMBPIDAqVz+deXQjohL1Amzu2JZe4DWl4s/DU4AE8xRP/2zkOTbzZrthOhKgvSRiDA8muXAwfBFrsM+a9V3LO56MfdH4XvCfXmRVqKu2QsugL4vdJ7iVzYS3dr8RpUyCL41xPd7sjflo57muIe/Cy9aT9mga+3KRKToYL1SHAuBkpxEf9I1kXbnesnd5T9+svKnG9p7NDTrecitGtfJ1sOv4YfoXEytx70VF8mBsktmp9MoteXRsbsZz+xMI/qgOgokUoS8GFshdUH/kwRvcPovEHP9aHVKXj+Km0ty/dzCyASca2C3fR3ONsP8TOqLs1bg1WwpFFzcOSfJgnOlx5htOjxSJjFIWGQVMhb5TL84cfo/9R7Kqq1V/Gy8IYUfZv51eRsOorqZHGnufrq410ng0GPY8KkEbu8U5Y3XTjygW4JogKGF0ZjzU6QP1It8hA1cR/dqb5zfEATr8LQDURrX1DTt874ocbhNydX/uxG0nDVj4M+7DrfXdY98dU+KgpA=
   app: extranet-app
   on:
     tags: true
-    repo: "$IMAGE_NAME"
+    repo: $IMAGE_NAME
 
 # Send the message of success after the deploy is done properly
 after_deploy:
