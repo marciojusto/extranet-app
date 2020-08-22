@@ -9,6 +9,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.http.MediaType;
 import org.springframework.http.codec.ServerCodecConfigurer;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.RequestPredicates;
 import org.springframework.web.reactive.function.server.RouterFunction;
@@ -39,9 +40,18 @@ public class GlobalExceptionHandler extends AbstractErrorWebExceptionHandler {
     }
 
     private Mono<ServerResponse> formatErrorResponse(ServerRequest request) {
-        Map<String, Object> errorAttributes = getErrorAttributes(request, ErrorAttributeOptions.of(ErrorAttributeOptions.Include.STACK_TRACE));
+        Map<String, Object> errorAttributes = getErrorAttributes(request, setErrorAttribute(request.uri().getQuery()));
         return ServerResponse.status((int) Optional.ofNullable(errorAttributes.get("status")).orElse(500))
                              .contentType(MediaType.APPLICATION_JSON)
                              .body(BodyInserters.fromValue(errorAttributes));
+    }
+
+    private boolean isTraceEnabled(String query) {
+        return !StringUtils.isEmpty(query) && query.contains("trace=true");
+    }
+
+    private ErrorAttributeOptions setErrorAttribute(String query) {
+        return isTraceEnabled(query) ?
+                ErrorAttributeOptions.of(ErrorAttributeOptions.Include.STACK_TRACE) : ErrorAttributeOptions.defaults();
     }
 }

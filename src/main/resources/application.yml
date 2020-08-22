@@ -1,4 +1,9 @@
+server:
+  port: 8081
+
 spring:
+  application:
+    name: extranet
   r2dbc:
     url: r2dbc:postgresql://172.23.0.2:5432/sgiextranet?schema=extranet
     username: sgiextranet
@@ -13,7 +18,3 @@ logging:
       springframework:
         data:
           r2dbc: DEBUG
-
-server:
-  error:
-    include-stacktrace: on_param
